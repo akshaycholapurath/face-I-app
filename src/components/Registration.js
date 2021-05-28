@@ -30,7 +30,7 @@ class Register extends Component{
         if(!email||!password||!name){
             return alert("Please fill up the form")
         }
-        fetch('http://localhost:3001/register',{
+        fetch('https://face-i-appserver.herokuapp.com/register',{
             method:'post',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({

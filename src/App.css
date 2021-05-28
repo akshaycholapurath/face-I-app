@@ -26,12 +26,17 @@
   border-radius: 10px;
   background-color: rgb(5, 0, 0);
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 .logocontainer {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  grid-gap: 70px;
   margin-bottom: 20px;
+  justify-content: start;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 700px) and (min-width: 300px) {

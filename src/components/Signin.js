@@ -24,7 +24,7 @@ class Signin extends Component{
         if(!email||!password){
             return alert("Please fill up the sign-in form")
         }
-        fetch('http://localhost:3001/signin',{
+        fetch('https://face-i-appserver.herokuapp.com/signin',{
             method:'post',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({

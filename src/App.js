@@ -104,7 +104,7 @@ class App extends Component{
 
   onButtonsubmit =()=>{
     this.setState({imageURL:this.state.input})
-    fetch('http://localhost:3001/imageUrl',{
+    fetch('https://face-i-appserver.herokuapp.com/imageUrl',{
               method:'post',
               headers:{'Content-Type':'application/json'},
               body:JSON.stringify({
@@ -114,7 +114,7 @@ class App extends Component{
     .then(res=> res.json())
     .then(res=>{
           if(res){
-            fetch('http://localhost:3001/image',{
+            fetch('https://face-i-appserver.herokuapp.com/image',{
               method:'put',
               headers:{'Content-Type':'application/json'},
               body:JSON.stringify({
@@ -148,7 +148,7 @@ class App extends Component{
         
         <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange} />
         {this.state.route==='home'
-          ? <div>
+          ? <div className="app-container">
                 <Logo />
                 <Rank name={this.state.user.name} entries={this.state.user.entries} />
                 <Imagelink 
